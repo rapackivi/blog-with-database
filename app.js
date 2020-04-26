@@ -33,8 +33,7 @@ const Post = mongoose.model("post",postSchema);
 app.get("/", function(req, res){
   Post.find((err,result)=>{
     if (!err){
-      console.log("reading success!");
-      res.render("home", {
+        res.render("home", {
         startingContent: homeStartingContent,
         posts: result
         });
